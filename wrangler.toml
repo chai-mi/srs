@@ -1,0 +1,16 @@
+compatibility_date = "2024-11-12"
+name = "srs"
+workers_dev = false
+
+[assets]
+directory = "./public/"
+
+[observability]
+enabled = true
+
+[[routes]]
+custom_domain = true
+pattern = "srs.chaimi.cc"
+
+[build]
+command = "go run ./src -c ./config/config.json"

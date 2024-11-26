@@ -1,0 +1,90 @@
+{
+    "full": {
+        "region1.v2.argotunnel.com": "cn",
+        "region2.v2.argotunnel.com": "cn",
+        "gemini.google.com": "gemini",
+        "aistudio.google.com": "google-gemini",
+        "mtalk.google.com": "gemini",
+        "ai.google.dev": "gemini",
+        "makersuite.google.com": "gemini",
+        "lens.google.com": "gemini",
+        "generativelanguage.googleapis.com": "gemini",
+        "security.debian.org": "category-dev",
+        "octocaptcha.com": [
+            "category-dev",
+            "github"
+        ],
+        "arkoselabs.com": [
+            "category-dev",
+            "github"
+        ],
+        "services.googleapis.cn": [
+            "geolocation-!cn",
+            "google"
+        ]
+    },
+    "suffix": {
+        "mihoyo.com": "cn",
+        "bhsr.com": "cn",
+        "yuanshen.com": "cn",
+        "discourse-cdn.com": "category-dev",
+        "clerk.accounts.dev": "category-dev",
+        "docker.com": "category-dev",
+        "mcdn.bilivideo.cn": "ads",
+        "staticfile.org": "exclude-block",
+        "staticfile.net": "exclude-block",
+        "z-library.sk": "geolocation-!cn",
+        "gcore.com": "geolocation-!cn",
+        "grafana.net": "geolocation-!cn",
+        "cachefly.net": "geolocation-!cn",
+        "replit.com": "geolocation-!cn",
+        "steamcommunity.com": [
+            "geolocation-!cn",
+            "exclude-steam"
+        ],
+        "obsproject.com": "geolocation-!cn",
+        "namesilo.com": "geolocation-!cn",
+        "ecostack.cloud": [
+            "geolocation-!cn",
+            "vps"
+        ],
+        "nodeseek.com": "geolocation-!cn",
+        "jellyfin.org": "geolocation-!cn",
+        "xicons.org": "geolocation-!cn",
+        "coolify.io": "geolocation-!cn",
+        "groq.com": [
+            "ai",
+            "groq",
+            "geolocation-!cn"
+        ],
+        "suno.com": "ai",
+        "lmsys.org": "ai",
+        "meta.ai": "ai",
+        "clients6.google.com": "gemini",
+        "dmhy.org": "geolocation-!cn",
+        "mikanani.me": "geolocation-!cn",
+        "miobt.com": "geolocation-!cn",
+        "evoxt.com": "geolocation-!cn",
+        "serv00.com": "geolocation-!cn",
+        "gwdg.de": "geolocation-!cn",
+        "mathworks.com": "geolocation-!cn",
+        "pages.dev": "geolocation-!cn",
+        "koyeb.com": "geolocation-!cn",
+        "koyeb.app": "geolocation-!cn",
+        "cohere.ai": "geolocation-!cn",
+        "anthropic.com": [
+            "claude",
+            "geolocation-!cn"
+        ],
+        "reka.ai": [
+            "reka",
+            "geolocation-!cn"
+        ],
+        "claude.ai": [
+            "claude",
+            "geolocation-!cn"
+        ],
+        "cn": "exclude-cn",
+        "live.com": "exclude-cn"
+    }
+}
