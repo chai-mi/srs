@@ -1,4 +1,5 @@
 .vscode
 .wrangler
 list
-public
+public/*
+!public/telegram.srs
