@@ -72,7 +72,7 @@
         {
             "format": "domain-list",
             "type": "local",
-            "src": "./config/extra.json"
+            "src": "./extra.json"
         }
     ],
     "rules": [

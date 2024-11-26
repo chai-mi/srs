@@ -13,4 +13,4 @@ custom_domain = true
 pattern = "srs.chaimi.cc"
 
 [build]
-command = "go run ./src -c ./config/config.json"
+command = "go run ./src -c ./config.json"
