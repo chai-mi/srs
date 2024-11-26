@@ -5,9 +5,6 @@ workers_dev = false
 [assets]
 directory = "./public/"
 
-[observability]
-enabled = true
-
 [[routes]]
 custom_domain = true
 pattern = "srs.chaimi.cc"
