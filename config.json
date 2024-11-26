@@ -48,20 +48,8 @@
         {
             "format": "url",
             "type": "remote",
-            "src": "https://raw.githubusercontent.com/ngosang/trackerslist/master/blacklist.txt",
-            "addtags": "block-public-tracker"
-        },
-        {
-            "format": "url",
-            "type": "remote",
             "src": "https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt",
             "addtags": "public-tracker"
-        },
-        {
-            "format": "url",
-            "type": "remote",
-            "src": "https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/blacklist.txt",
-            "addtags": "block-public-tracker"
         },
         {
             "format": "hosts",
@@ -83,7 +71,6 @@
                 "full"
             ],
             "tag weight": {
-                "block-public-tracker": 1,
                 "block-windows-spy": 1,
                 "anti-ad-pcdn": 1,
                 "anti-ad-httpdns": 1,
