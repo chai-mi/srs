@@ -33,6 +33,7 @@
         "mcdn.bilivideo.cn": "ads",
         "staticfile.org": "exclude-block",
         "staticfile.net": "exclude-block",
+        "msecnd.net": "exclude-cn",
         "z-library.sk": "geolocation-!cn",
         "gcore.com": "geolocation-!cn",
         "grafana.net": "geolocation-!cn",

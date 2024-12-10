@@ -109,6 +109,7 @@
                 "full"
             ],
             "tag weight": {
+                "exclude-cn": 100,
                 "geolocation-!cn": 1,
                 "gfwlist": 1,
                 "category-dev": 1,
