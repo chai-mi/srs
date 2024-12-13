@@ -39,7 +39,19 @@
         "grafana.net": "geolocation-!cn",
         "cachefly.net": "geolocation-!cn",
         "replit.com": "geolocation-!cn",
+        "steampowered.com": [
+            "geolocation-!cn",
+            "exclude-steam"
+        ],
         "steamcommunity.com": [
+            "geolocation-!cn",
+            "exclude-steam"
+        ],
+        "steamuserimages-a.akamaihd.net": [
+            "geolocation-!cn",
+            "exclude-steam"
+        ],
+        "steamcommunity-a.akamaihd.net": [
             "geolocation-!cn",
             "exclude-steam"
         ],
