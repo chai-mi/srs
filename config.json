@@ -16,24 +16,6 @@
             "addtags": "gfwlist"
         },
         {
-            "format": "list",
-            "type": "remote",
-            "src": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-domains.txt",
-            "addtags": "anti-ad"
-        },
-        {
-            "format": "list",
-            "type": "remote",
-            "src": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/discretion/pcdn.txt",
-            "addtags": "anti-ad-pcdn"
-        },
-        {
-            "format": "list",
-            "type": "remote",
-            "src": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/discretion/dns.txt",
-            "addtags": "anti-ad-httpdns"
-        },
-        {
             "format": "dnsmasq",
             "type": "remote",
             "src": "https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf",
@@ -72,8 +54,6 @@
             ],
             "tag weight": {
                 "block-windows-spy": 1,
-                "anti-ad-pcdn": 1,
-                "anti-ad-httpdns": 1,
                 "category-ads-all": 1,
                 "exclude-block": -100,
                 "ads": 1
