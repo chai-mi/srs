@@ -18,6 +18,10 @@
             "category-dev",
             "github"
         ],
+        "deepseek.com": [
+            "ai",
+            "exclude-cn"
+        ],
         "services.googleapis.cn": [
             "geolocation-!cn",
             "google"
@@ -73,6 +77,10 @@
         "suno.com": "ai",
         "lmsys.org": "ai",
         "meta.ai": "ai",
+        "deepseek.com": [
+            "ai",
+            "exclude-cn"
+        ],
         "clients6.google.com": "gemini",
         "dmhy.org": "geolocation-!cn",
         "mikanani.me": "geolocation-!cn",
