@@ -42,6 +42,7 @@
         "gcore.com": "geolocation-!cn",
         "grafana.net": "geolocation-!cn",
         "cachefly.net": "geolocation-!cn",
+        "bytevirt.com": "geolocation-!cn",
         "replit.com": "geolocation-!cn",
         "steampowered.com": [
             "geolocation-!cn",
