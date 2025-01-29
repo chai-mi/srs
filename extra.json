@@ -21,8 +21,7 @@
         "services.googleapis.cn": [
             "geolocation-!cn",
             "google"
-        ],
-        "lobechat.chaimi.cc": "geolocation-!cn"
+        ]
     },
     "suffix": {
         "mihoyo.com": "cn",
