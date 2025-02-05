@@ -42,22 +42,6 @@
         "dispatchosglobal.yuanshen.com": "geolocation-!cn",
         "bytevirt.com": "geolocation-!cn",
         "replit.com": "geolocation-!cn",
-        "steampowered.com": [
-            "geolocation-!cn",
-            "exclude-steam"
-        ],
-        "steamcommunity.com": [
-            "geolocation-!cn",
-            "exclude-steam"
-        ],
-        "steamuserimages-a.akamaihd.net": [
-            "geolocation-!cn",
-            "exclude-steam"
-        ],
-        "steamcommunity-a.akamaihd.net": [
-            "geolocation-!cn",
-            "exclude-steam"
-        ],
         "obsproject.com": "geolocation-!cn",
         "namesilo.com": "geolocation-!cn",
         "ecostack.cloud": [
