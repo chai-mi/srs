@@ -48,6 +48,7 @@
             "geolocation-!cn",
             "vps"
         ],
+        "esm.sh": "geolocation-!cn",
         "nodeseek.com": "geolocation-!cn",
         "jellyfin.org": "geolocation-!cn",
         "xicons.org": "geolocation-!cn",
