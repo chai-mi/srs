@@ -48,6 +48,8 @@
             "geolocation-!cn",
             "vps"
         ],
+        "atlasos.net": "geolocation-!cn",
+        "lobechat.com": "geolocation-!cn",
         "esm.sh": "geolocation-!cn",
         "nodeseek.com": "geolocation-!cn",
         "jellyfin.org": "geolocation-!cn",
