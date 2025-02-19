@@ -61,6 +61,10 @@
             "groq",
             "geolocation-!cn"
         ],
+        "grok.com": [
+            "ai",
+            "geolocation-!cn"
+        ],
         "suno.com": "ai",
         "lmsys.org": "ai",
         "meta.ai": "ai",
