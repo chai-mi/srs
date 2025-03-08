@@ -94,6 +94,16 @@
             "geolocation-!cn"
         ],
         "cn": "exclude-cn",
-        "live.com": "exclude-cn"
+        "live.com": "exclude-cn",
+        "steamcontent.com": "exclude-steam",
+        "steamusercontent.com": "exclude-steam",
+        "steamgames.com": "exclude-steam",
+        "steamstatic.com": "exclude-steam",
+        "steamserver.net": "exclude-steam",
+        "test.steampowered.com": "exclude-steam",
+        "api.steampowered.com": "exclude-steam",
+        "rmbgame.net": "exclude-steam",
+        "akamaihd.net": "exclude-steam",
+        "steamcommunity.com": "steam"
     }
 }
