@@ -95,15 +95,15 @@
         ],
         "cn": "exclude-cn",
         "live.com": "exclude-cn",
-        "steamcontent.com": "exclude-steam",
-        "steamusercontent.com": "exclude-steam",
-        "steamgames.com": "exclude-steam",
-        "steamstatic.com": "exclude-steam",
-        "steamserver.net": "exclude-steam",
-        "test.steampowered.com": "exclude-steam",
-        "api.steampowered.com": "exclude-steam",
-        "rmbgame.net": "exclude-steam",
-        "akamaihd.net": "exclude-steam",
-        "steamcommunity.com": "steam"
+        "steamcontent.com": "steam",
+        "steamusercontent.com": "steam",
+        "steamgames.com": "steam",
+        "steamstatic.com": "steam",
+        "steamserver.net": "steam",
+        "test.steampowered.com": "steam",
+        "api.steampowered.com": "steam",
+        "rmbgame.net": "steam",
+        "akamaihd.net": "steam",
+        "steamcommunity.com": "geolocation-!cn"
     }
 }
