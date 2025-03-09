@@ -104,6 +104,6 @@
         "api.steampowered.com": "steam",
         "rmbgame.net": "steam",
         "akamaihd.net": "steam",
-        "steamcommunity.com": "geolocation-!cn"
+        "steamcommunity.com": "exclude-steam"
     }
 }
