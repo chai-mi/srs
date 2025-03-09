@@ -101,9 +101,9 @@
         "steamstatic.com": "steam",
         "steamserver.net": "steam",
         "test.steampowered.com": "steam",
-        "api.steampowered.com": "steam",
         "rmbgame.net": "steam",
         "akamaihd.net": "steam",
+        "api.steampowered.com": "exclude-steam",
         "steamcommunity.com": "exclude-steam"
     }
 }
