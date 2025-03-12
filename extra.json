@@ -107,6 +107,10 @@
         "steamcommunity.com": [
             "exclude-steam",
             "geolocation-!cn"
+        ],
+        "store.steampowered.com": [
+            "exclude-steam",
+            "geolocation-!cn"
         ]
     }
 }
