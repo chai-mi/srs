@@ -21,7 +21,12 @@
         "services.googleapis.cn": [
             "geolocation-!cn",
             "google"
-        ]
+        ],
+        "aliyuncs.com": "cn",
+        "steamcloud-tyo.s3.dualstack.ap-northeast-1.amazonaws.com": "steam",
+        "steamcloud-sg.s3.dualstack.ap-southeast-1.amazonaws.com": "steam",
+        "steamcloud-hkg.oss-accelerate.aliyuncs.com": "steam",
+        "steamcloud-sgp.oss-accelerate.aliyuncs.com": "steam"
     },
     "suffix": {
         "mihoyo.com": "cn",
@@ -94,6 +99,16 @@
             "geolocation-!cn"
         ],
         "cn": "exclude-cn",
-        "live.com": "exclude-cn"
+        "live.com": "exclude-cn",
+        "steam.clngaa.com": "steam",
+        "api.steampowered.com": "exclude-steam",
+        "steamcommunity.com": [
+            "exclude-steam",
+            "geolocation-!cn"
+        ],
+        "store.steampowered.com": [
+            "exclude-steam",
+            "geolocation-!cn"
+        ]
     }
 }
