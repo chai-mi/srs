@@ -41,6 +41,7 @@
         "staticfile.net": "exclude-block",
         "msecnd.net": "exclude-cn",
         "z-library.sk": "geolocation-!cn",
+        "toronto.edu": "geolocation-!cn",
         "gcore.com": "geolocation-!cn",
         "unity.com": "geolocation-!cn",
         "grafana.net": "geolocation-!cn",
