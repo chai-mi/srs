@@ -2,13 +2,6 @@
     "full": {
         "region1.v2.argotunnel.com": "cn",
         "region2.v2.argotunnel.com": "cn",
-        "gemini.google.com": "gemini",
-        "aistudio.google.com": "google-gemini",
-        "mtalk.google.com": "gemini",
-        "ai.google.dev": "gemini",
-        "makersuite.google.com": "gemini",
-        "lens.google.com": "gemini",
-        "generativelanguage.googleapis.com": "gemini",
         "security.debian.org": "category-dev",
         "octocaptcha.com": [
             "category-dev",

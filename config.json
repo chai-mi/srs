@@ -141,12 +141,12 @@
                 "full"
             ],
             "tag weight": {
-                "category-ai-chat-!cn": 1,
-                "openai": 1,
+                "category-ai-!cn": 1,
                 "ai": 1,
+                "openai": 1,
                 "bing": 1,
                 "reka": 1,
-                "gemini": 1,
+                "google-gemini": 1,
                 "claude": 1,
                 "ads": -100,
                 "category-ads-all": -100
