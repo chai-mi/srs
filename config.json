@@ -10,12 +10,6 @@
             "src": "https://raw.githubusercontent.com/v2fly/domain-list-community/release/dlc.dat"
         },
         {
-            "format": "list",
-            "type": "remote",
-            "src": "https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/gfw.txt",
-            "addtags": "gfwlist"
-        },
-        {
             "format": "dnsmasq",
             "type": "remote",
             "src": "https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf",
@@ -92,7 +86,6 @@
                 "exclude-steam": 1000,
                 "exclude-cn": 100,
                 "geolocation-!cn": 1,
-                "gfwlist": 1,
                 "category-dev": 1,
                 "ai": 1,
                 "category-ai-chat-!cn": 1,
