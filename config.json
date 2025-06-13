@@ -96,6 +96,7 @@
                 "google": 10,
                 "hoyoverse": 100,
                 "cn": -10,
+                "category-games": -1,
                 "tld-cn": -100,
                 "apple": -1,
                 "microsoft": -1,
