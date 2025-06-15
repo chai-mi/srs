@@ -25,7 +25,7 @@ func save2ruleset(dtl *data.DomainList, path string) error {
 	defer file.Close()
 
 	rs := toRuleset(dtl)
-	return srs.Write(file, rs, false)
+	return srs.Write(file, rs, 3)
 }
 
 func toRuleset(dtl *data.DomainList) option.PlainRuleSet {

@@ -2,7 +2,6 @@ package outbounds
 
 import (
 	"bufio"
-	"fmt"
 	"os"
 	"path/filepath"
 
@@ -47,7 +46,7 @@ func save2clash(dtl *data.DomainList, path string) error {
 
 	err = writer.Flush()
 	if err != nil {
-		log.Warn(fmt.Sprintf("写入文件：%s 错误", path))
+		log.Warn("写入文件：%s 错误", path)
 		return err
 	}
 	return nil
