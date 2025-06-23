@@ -33,6 +33,7 @@
         "staticfile.org": "exclude-block",
         "staticfile.net": "exclude-block",
         "msecnd.net": "exclude-cn",
+        "hackmd.io": "geolocation-!cn",
         "z-library.sk": "geolocation-!cn",
         "toronto.edu": "geolocation-!cn",
         "gcore.com": "geolocation-!cn",
