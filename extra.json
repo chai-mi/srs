@@ -34,6 +34,8 @@
         "staticfile.net": "exclude-block",
         "msecnd.net": "exclude-cn",
         "hackmd.io": "geolocation-!cn",
+        "frostsky.com": "geolocation-!cn",
+        "111666.best": "geolocation-!cn",
         "z-library.sk": "geolocation-!cn",
         "toronto.edu": "geolocation-!cn",
         "gcore.com": "geolocation-!cn",
