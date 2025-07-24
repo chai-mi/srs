@@ -22,6 +22,14 @@
         "steamcloud-sgp.oss-accelerate.aliyuncs.com": "steam"
     },
     "suffix": {
+        "tr.bangumi.moe": "public-tracker",
+        "t.acg.rip": "public-tracker",
+        "btn-prod.ghostchu-services.top": "public-tracker",
+        "sparkle.ghostchu-services.top": "public-tracker",
+        "open.stealth.si": "public-tracker",
+        "tracker.opentrackr.org": "public-tracker",
+        "exodus.desync.com": "public-tracker",
+        "tracker.torrent.eu.org": "public-tracker",
         "mihoyo.com": "cn",
         "gamma.app": "ai",
         "bhsr.com": "cn",

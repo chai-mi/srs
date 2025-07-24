@@ -41,6 +41,16 @@
     ],
     "rules": [
         {
+            "category": "tracker",
+            "domain type": [
+                "suffix",
+                "full"
+            ],
+            "tag weight": {
+                "public-tracker": 1
+            }
+        },
+        {
             "category": "block",
             "domain type": [
                 "suffix",
@@ -64,7 +74,6 @@
                 "cn": 1,
                 "microsoft": 1,
                 "apple": 1,
-                "public-tracker": 1,
                 "onedrive": -100,
                 "google": -100,
                 "hoyoverse": -100,
