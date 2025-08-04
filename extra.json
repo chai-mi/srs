@@ -23,7 +23,7 @@
     },
     "suffix": {
         "tr.bangumi.moe": "public-tracker",
-        "t.acg.rip": "public-tracker",
+        "acg.rip": "geolocation-!cn",
         "btn-prod.ghostchu-services.top": "public-tracker",
         "sparkle.ghostchu-services.top": "public-tracker",
         "open.stealth.si": "public-tracker",
