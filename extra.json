@@ -44,6 +44,7 @@
         "staticfile.net": "exclude-block",
         "msecnd.net": "exclude-cn",
         "qbittorrent.org": "geolocation-!cn",
+        "katex.org": "geolocation-!cn",
         "hackmd.io": "geolocation-!cn",
         "frostsky.com": "geolocation-!cn",
         "111666.best": "geolocation-!cn",
