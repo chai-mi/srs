@@ -70,6 +70,7 @@
                 "full"
             ],
             "tag weight": {
+                "not-proxy": 10000,
                 "dnsmasq-china-list": 1,
                 "cn": 1,
                 "microsoft": 1,
@@ -110,6 +111,7 @@
                 "apple": -1,
                 "microsoft": -1,
                 "category-ads-all": -100,
+                "not-proxy": -10000,
                 "steam": -100,
                 "public-tracker": -100,
                 "block-windows-spy": -100,

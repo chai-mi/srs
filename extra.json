@@ -35,6 +35,7 @@
         "jina.ai": "ai",
         "bhsr.com": "cn",
         "yuanshen.com": "cn",
+        "ieee.org": "not-proxy",
         "discourse-cdn.com": "category-dev",
         "ai-sdk.dev": "category-dev",
         "clerk.accounts.dev": "category-dev",
