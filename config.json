@@ -94,6 +94,7 @@
                 "full"
             ],
             "tag weight": {
+                "proxy": 1000,
                 "exclude-steam": 1000,
                 "exclude-cn": 100,
                 "geolocation-!cn": 1,

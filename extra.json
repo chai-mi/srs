@@ -22,8 +22,9 @@
         "steamcloud-sgp.oss-accelerate.aliyuncs.com": "steam"
     },
     "suffix": {
-        "tr.bangumi.moe": "public-tracker",
-        "acg.rip": "geolocation-!cn",
+        "bangumi.moe": "proxy",
+        "acg.rip": "proxy",
+        "share.acgnx.se": "proxy",
         "btn-prod.ghostchu-services.top": "public-tracker",
         "sparkle.ghostchu-services.top": "public-tracker",
         "open.stealth.si": "public-tracker",
