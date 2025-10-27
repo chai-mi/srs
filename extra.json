@@ -22,6 +22,7 @@
         "steamcloud-sgp.oss-accelerate.aliyuncs.com": "steam"
     },
     "suffix": {
+        "tinygo.org": "proxy",
         "bangumi.moe": "proxy",
         "acg.rip": "proxy",
         "share.acgnx.se": "proxy",
