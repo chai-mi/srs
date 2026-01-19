@@ -22,6 +22,7 @@
         "steamcloud-sgp.oss-accelerate.aliyuncs.com": "steam"
     },
     "suffix": {
+        "chunkbase.com": "proxy",
         "pola.rs": "proxy",
         "neoforged.net": "proxy",
         "tinygo.org": "proxy",
