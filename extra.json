@@ -22,6 +22,7 @@
         "steamcloud-sgp.oss-accelerate.aliyuncs.com": "steam"
     },
     "suffix": {
+        "cloudcode-pa.googleapis.com": "ai",
         "minecraft.wiki": "proxy",
         "chunkbase.com": "proxy",
         "pola.rs": "proxy",
