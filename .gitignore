@@ -2,4 +2,3 @@
 .wrangler
 list
 public/*
-!public/telegram.srs

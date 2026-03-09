@@ -8,6 +8,7 @@ import (
 	"domain_generate/src/log"
 
 	"github.com/sagernet/sing-box/common/srs"
+	"github.com/sagernet/sing-box/constant"
 	"github.com/sagernet/sing-box/option"
 )
 
@@ -25,7 +26,7 @@ func save2ruleset(dtl *data.DomainList, path string) error {
 	defer file.Close()
 
 	rs := toRuleset(dtl)
-	return srs.Write(file, rs, 3)
+	return srs.Write(file, rs, constant.RuleSetVersion3)
 }
 
 func toRuleset(dtl *data.DomainList) option.PlainRuleSet {

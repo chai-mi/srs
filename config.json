@@ -160,6 +160,16 @@
                 "ads": -100,
                 "category-ads-all": -100
             }
+        },
+        {
+            "category": "telegram-geosite",
+            "domain type": [
+                "suffix",
+                "full"
+            ],
+            "tag weight": {
+                "telegram": 1
+            }
         }
     ],
     "outbounds": [
