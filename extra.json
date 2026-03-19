@@ -23,6 +23,7 @@
     },
     "suffix": {
         "cloudcode-pa.googleapis.com": "ai",
+        "typst.app": "proxy",
         "curseforge.com": "proxy",
         "modrinth.com": "proxy",
         "minecraft.wiki": "proxy",
