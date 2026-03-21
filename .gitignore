@@ -1,4 +1,1 @@
-.vscode
-.wrangler
-list
-public/*
+public/

@@ -1,4 +1,4 @@
-package inbounds
+package source
 
 import (
 	"bufio"
@@ -8,25 +8,33 @@ import (
 	"net/url"
 	"strings"
 
-	"domain_generate/src/data"
-	"domain_generate/src/log"
+	domainlist "github.com/chai-mi/srs/domain-list"
 )
 
-func loadFromURL(inbound Inbound) (*data.DomainList, error) {
-	if inbound.AddTags == nil {
-		log.Warn("未指定 add tags")
-		log.Info("已跳过 %s", inbound.Src)
-		return nil, errors.New("not add tags")
+var _ SourceData = (*Url)(nil)
+
+type Url struct {
+	src     string
+	addTags domainlist.Tags
+}
+
+func NewUrl(src string, addTag string) *Url {
+	return &Url{
+		src:     src,
+		addTags: domainlist.NewTags(addTag),
 	}
-	input, err := getInput(inbound.Type, inbound.Src)
+}
+
+func (u *Url) Load() (*domainlist.DomainList, error) {
+	data, err := getInput(u.src)
 	if err != nil {
 		return nil, err
 	}
-	return parseURL(input, inbound.AddTags)
+	return parseDnsmasq(data, u.addTags)
 }
 
-func parseURL(input []byte, tags *data.Tags) (*data.DomainList, error) {
-	list := data.NewDomainList()
+func parseURL(input []byte, tags domainlist.Tags) (*domainlist.DomainList, error) {
+	list := domainlist.NewDomainList()
 	scanner := bufio.NewScanner(bytes.NewReader(input))
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
@@ -38,7 +46,7 @@ func parseURL(input []byte, tags *data.Tags) (*data.DomainList, error) {
 		if err != nil {
 			continue
 		}
-		list.Add(line, data.DomainFull, tags)
+		list.Add(line, domainlist.DomainFull, tags)
 	}
 	return list, nil
 }
@@ -46,13 +54,11 @@ func parseURL(input []byte, tags *data.Tags) (*data.DomainList, error) {
 func getHost(urlStr string) (string, error) {
 	u, err := url.Parse(urlStr)
 	if err != nil {
-		log.Warn("输入值不是 URL: %s", urlStr)
 		return "", err
 	}
 	host := u.Hostname()
 
 	if net.ParseIP(host) != nil {
-		log.Warn("URL: %s host 部分不是域名", urlStr)
 		return "", errors.New("host is not domain")
 	}
 	return host, nil

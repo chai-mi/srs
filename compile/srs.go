@@ -1,26 +1,23 @@
-package outbounds
+package compile
 
 import (
 	"os"
 	"path/filepath"
 
-	"domain_generate/src/data"
-	"domain_generate/src/log"
+	domainlist "github.com/chai-mi/srs/domain-list"
 
 	"github.com/sagernet/sing-box/common/srs"
 	"github.com/sagernet/sing-box/constant"
 	"github.com/sagernet/sing-box/option"
 )
 
-func save2ruleset(dtl *data.DomainList, path string) error {
+func Save2ruleset(dtl *domainlist.DomainList, path string) error {
 	dir := filepath.Dir(path)
 	if err := os.MkdirAll(dir, 0755); err != nil {
-		log.Warn("无法创建目录：%s", dir)
 		return err
 	}
 	file, err := os.Create(path)
 	if err != nil {
-		log.Warn("无法创建文件：%s", path)
 		return err
 	}
 	defer file.Close()
@@ -29,7 +26,7 @@ func save2ruleset(dtl *data.DomainList, path string) error {
 	return srs.Write(file, rs, constant.RuleSetVersion3)
 }
 
-func toRuleset(dtl *data.DomainList) option.PlainRuleSet {
+func toRuleset(dtl *domainlist.DomainList) option.PlainRuleSet {
 	var headlessRule option.DefaultHeadlessRule
 	if l := len(dtl.Full); l > 0 {
 		headlessRule.Domain = make([]string, 0, l)

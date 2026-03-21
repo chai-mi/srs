@@ -6,4 +6,4 @@ workers_dev = false
 directory = "./public/"
 
 [build]
-command = "go run ./src -c ./config.json"
+command = "go run ./cmd"
