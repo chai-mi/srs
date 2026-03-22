@@ -66,6 +66,7 @@ func main() {
 			"google":                           -100,
 		},
 	})
+
 	proxy := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
@@ -104,6 +105,10 @@ func main() {
 	compile.Save2ruleset(proxy, "./public/proxy.srs")
 	compile.Save2ruleset(ai, "./public/ai.srs")
 	compile.Save2ruleset(telegramGeosite, "./public/telegram-geosite.srs")
+
+	block.Save("./list/block.json")
+	direct.Save("./list/direct.json")
+	proxy.Save("./list/proxy.json")
 
 	telegramgeoip("./public/telegram-geoip.srs")
 }
