@@ -6,6 +6,7 @@ import (
 	"github.com/chai-mi/srs/compile"
 	domainlist "github.com/chai-mi/srs/domain-list"
 	"github.com/chai-mi/srs/source"
+	mapset "github.com/deckarep/golang-set/v2"
 
 	"github.com/sagernet/sing-box/common/srs"
 	"github.com/sagernet/sing-box/constant"
@@ -15,28 +16,36 @@ import (
 func main() {
 	v2ray, _ := source.NewGeoSite("https://raw.githubusercontent.com/v2fly/domain-list-community/release/dlc.dat").Load()
 	chinaList, _ := source.NewDnsmasq("https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf", "dnsmasq-china-list").Load()
-	trackerslist, _ := source.NewUrl("https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt", "public-tracker").Load()
-	trackersListCollection, _ := source.NewUrl("https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt", "public-tracker").Load()
-	windowsSpyBlocker, _ := source.NewHosts("https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt", "block-windows-spy").Load()
-	extra, _ := domainlist.LoadDomainList("extra.json")
+	// trackerslist, _ := source.NewUrl("https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt", "public-tracker").Load()
+	// trackersListCollection, _ := source.NewUrl("https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt", "public-tracker").Load()
+	// windowsSpyBlocker, _ := source.NewHosts("https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt", "block-windows-spy").Load()
 
-	v2ray.Save("./list/v2ray.json")
+	extra := domainlist.NewDomainList()
+	extra.Suffix = map[string]mapset.Set[string]{
+		"connectivitycheck.gstatic.com": mapset.NewSet("google"),
+		"mcdn.bilivideo.cn":             mapset.NewSet("include-block"),
+		"argotunnel.com":                mapset.NewSet("exclude-proxy"),
+		"ieee.org":                      mapset.NewSet("exclude-proxy"),
+		"typst.app":                     mapset.NewSet("include-proxy"),
+		"chunkbase.com":                 mapset.NewSet("include-proxy"),
+		"pola.rs":                       mapset.NewSet("include-proxy"),
+		"neoforged.net":                 mapset.NewSet("include-proxy"),
+		"tinygo.org":                    mapset.NewSet("include-proxy"),
+		"bangumi.moe":                   mapset.NewSet("include-proxy"),
+		"acg.rip":                       mapset.NewSet("include-proxy"),
+		"share.acgnx.se":                mapset.NewSet("include-proxy"),
+		"steamcontent.com":              mapset.NewSet("category-game-platforms-download"),
+	}
 
 	v2ray.Union(chinaList)
-	v2ray.Union(trackerslist)
-	v2ray.Union(trackersListCollection)
-	v2ray.Union(windowsSpyBlocker)
+	// v2ray.Union(trackerslist)
+	// v2ray.Union(trackersListCollection)
+	// v2ray.Union(windowsSpyBlocker)
 	v2ray.Union(extra)
 
+	v2ray.Save("./list/all.json")
+
 	domainType := []string{"suffix", "full"}
-	tracker := v2ray.ApplyRule(&domainlist.Rule{
-		DomainType: domainType,
-		TagWeight: map[string]int64{
-			"include-tracker": 1e8,
-			"exclude-tracker": -1e8,
-			"public-tracker":  1,
-		},
-	})
 	block := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
@@ -62,8 +71,8 @@ func main() {
 			"dnsmasq-china-list":               1,
 			"cn":                               1,
 			"category-ai-!cn":                  -1,
-			"connectivity-check":               1,
 			"google":                           -100,
+			"connectivity-check":               1,
 		},
 	})
 
@@ -99,7 +108,6 @@ func main() {
 		},
 	})
 
-	compile.Save2ruleset(tracker, "./public/tracker.srs")
 	compile.Save2ruleset(block, "./public/block.srs")
 	compile.Save2ruleset(direct, "./public/direct.srs")
 	compile.Save2ruleset(proxy, "./public/proxy.srs")
