@@ -44,7 +44,7 @@ func parseGeosite(vGeositeData []byte) (*domainlist.DomainList, error) {
 			tag := mapset.NewSet(code)
 			if len(domain.Attribute) > 0 {
 				for _, attribute := range domain.Attribute {
-					tag.Add(attribute.Key)
+					tag.Add("@" + (attribute.Key))
 				}
 			}
 			switch domain.Type {

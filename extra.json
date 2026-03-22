@@ -1,136 +1,15 @@
 {
-    "full": {
-        "region1.v2.argotunnel.com": "cn",
-        "region2.v2.argotunnel.com": "cn",
-        "security.debian.org": "category-dev",
-        "octocaptcha.com": [
-            "category-dev",
-            "github"
-        ],
-        "arkoselabs.com": [
-            "category-dev",
-            "github"
-        ],
-        "services.googleapis.cn": [
-            "geolocation-!cn",
-            "google"
-        ],
-        "aliyuncs.com": "cn",
-        "steamcloud-tyo.s3.dualstack.ap-northeast-1.amazonaws.com": "steam",
-        "steamcloud-sg.s3.dualstack.ap-southeast-1.amazonaws.com": "steam",
-        "steamcloud-hkg.oss-accelerate.aliyuncs.com": "steam",
-        "steamcloud-sgp.oss-accelerate.aliyuncs.com": "steam"
-    },
     "suffix": {
-        "cloudcode-pa.googleapis.com": "ai",
-        "typst.app": "proxy",
-        "curseforge.com": "proxy",
-        "modrinth.com": "proxy",
-        "minecraft.wiki": "proxy",
-        "chunkbase.com": "proxy",
-        "pola.rs": "proxy",
-        "neoforged.net": "proxy",
-        "tinygo.org": "proxy",
-        "bangumi.moe": "proxy",
-        "acg.rip": "proxy",
-        "share.acgnx.se": "proxy",
-        "btn-prod.ghostchu-services.top": "public-tracker",
-        "sparkle.ghostchu-services.top": "public-tracker",
-        "open.stealth.si": "public-tracker",
-        "tracker.opentrackr.org": "public-tracker",
-        "exodus.desync.com": "public-tracker",
-        "tracker.torrent.eu.org": "public-tracker",
-        "mihoyo.com": "cn",
-        "gamma.app": "ai",
-        "jina.ai": "ai",
-        "bhsr.com": "cn",
-        "yuanshen.com": "cn",
-        "ieee.org": "not-proxy",
-        "discourse-cdn.com": "category-dev",
-        "ai-sdk.dev": "category-dev",
-        "clerk.accounts.dev": "category-dev",
-        "docker.com": "category-dev",
-        "mcdn.bilivideo.cn": "ads",
-        "staticfile.org": "exclude-block",
-        "staticfile.net": "exclude-block",
-        "msecnd.net": "exclude-cn",
-        "qbittorrent.org": "geolocation-!cn",
-        "katex.org": "geolocation-!cn",
-        "hackmd.io": "geolocation-!cn",
-        "frostsky.com": "geolocation-!cn",
-        "111666.best": "geolocation-!cn",
-        "z-library.sk": "geolocation-!cn",
-        "toronto.edu": "geolocation-!cn",
-        "gcore.com": "geolocation-!cn",
-        "unity.com": "geolocation-!cn",
-        "grafana.net": "geolocation-!cn",
-        "cachefly.net": "geolocation-!cn",
-        "r2.bagelnl.my.id": "geolocation-!cn",
-        "dispatchosglobal.yuanshen.com": "geolocation-!cn",
-        "bytevirt.com": "geolocation-!cn",
-        "catbox.moe": "geolocation-!cn",
-        "replit.com": "geolocation-!cn",
-        "obsproject.com": "geolocation-!cn",
-        "ossplanet.net": "geolocation-!cn",
-        "namesilo.com": "geolocation-!cn",
-        "ecostack.cloud": [
-            "geolocation-!cn",
-            "vps"
-        ],
-        "atlasos.net": "geolocation-!cn",
-        "lobehub.com": "geolocation-!cn",
-        "esm.sh": "geolocation-!cn",
-        "nodeseek.com": "geolocation-!cn",
-        "jellyfin.org": "geolocation-!cn",
-        "xicons.org": "geolocation-!cn",
-        "coolify.io": "geolocation-!cn",
-        "groq.com": [
-            "ai",
-            "groq",
-            "geolocation-!cn"
-        ],
-        "grok.com": [
-            "ai",
-            "geolocation-!cn"
-        ],
-        "suno.com": "ai",
-        "lmsys.org": "ai",
-        "meta.ai": "ai",
-        "clients6.google.com": "gemini",
-        "dmhy.org": "geolocation-!cn",
-        "mikanani.me": "geolocation-!cn",
-        "miobt.com": "geolocation-!cn",
-        "evoxt.com": "geolocation-!cn",
-        "serv00.com": "geolocation-!cn",
-        "gwdg.de": "geolocation-!cn",
-        "mathworks.com": "geolocation-!cn",
-        "pages.dev": "geolocation-!cn",
-        "koyeb.com": "geolocation-!cn",
-        "koyeb.app": "geolocation-!cn",
-        "cohere.ai": "geolocation-!cn",
-        "anthropic.com": [
-            "claude",
-            "geolocation-!cn"
-        ],
-        "reka.ai": [
-            "reka",
-            "geolocation-!cn"
-        ],
-        "claude.ai": [
-            "claude",
-            "geolocation-!cn"
-        ],
-        "cn": "exclude-cn",
-        "live.com": "exclude-cn",
-        "steam.clngaa.com": "steam",
-        "api.steampowered.com": "exclude-steam",
-        "steamcommunity.com": [
-            "exclude-steam",
-            "geolocation-!cn"
-        ],
-        "store.steampowered.com": [
-            "exclude-steam",
-            "geolocation-!cn"
-        ]
+        "mcdn.bilivideo.cn": "include-block",
+        "argotunnel.com": "exclude-proxy",
+        "ieee.org": "exclude-proxy",
+        "typst.app": "include-proxy",
+        "chunkbase.com": "include-proxy",
+        "pola.rs": "include-proxy",
+        "neoforged.net": "include-proxy",
+        "tinygo.org": "include-proxy",
+        "bangumi.moe": "include-proxy",
+        "acg.rip": "include-proxy",
+        "share.acgnx.se": "include-proxy"
     }
 }

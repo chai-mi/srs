@@ -19,6 +19,9 @@ func main() {
 	trackersListCollection, _ := source.NewUrl("https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt", "public-tracker").Load()
 	windowsSpyBlocker, _ := source.NewHosts("https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt", "block-windows-spy").Load()
 	extra, _ := domainlist.LoadDomainList("extra.json")
+
+	v2ray.Save("./list/v2ray.json")
+
 	v2ray.Union(chinaList)
 	v2ray.Union(trackerslist)
 	v2ray.Union(trackersListCollection)
@@ -29,94 +32,61 @@ func main() {
 	tracker := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
-			"public-tracker": 1,
+			"include-tracker": 1e8,
+			"exclude-tracker": -1e8,
+			"public-tracker":  1,
 		},
 	})
 	block := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
+			"include-block":     1e8,
+			"exclude-block":     -1e8,
 			"block-windows-spy": 1,
 			"category-ads-all":  1,
-			"exclude-block":     -100,
-			"ads":               1,
+			"@ads":              1,
 		},
 	})
 	direct := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
-			"not-proxy":          10000,
-			"dnsmasq-china-list": 1,
-			"cn":                 1,
-			"microsoft":          1,
-			"apple":              1,
-			"onedrive":           -100,
-			"google":             -100,
-			"hoyoverse":          -100,
-			"exclude-cn":         -100,
-			"bing":               -100,
-			"category-dev":       -100,
-			"block-windows-spy":  -100,
-			"category-ads-all":   -100,
-			"mojang":             -100,
-			"ads":                -100,
+			"include-proxy":                    -1e8,
+			"exclude-proxy":                    1e8,
+			"category-game-platforms-download": 10,
+			"geolocation-cn":                   1,
+			"geolocation-!cn":                  -1,
+			"category-games-cn":                1,
+			"category-games-!cn":               -1,
+			"@cn":                              10,
+			"@!cn":                             -10,
+			"dnsmasq-china-list":               1,
+			"cn":                               1,
+			"category-ai-!cn":                  -1,
+			"connectivity-check":               1,
 		},
 	})
 	proxy := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
-			"proxy":                1000,
-			"exclude-steam":        1000,
-			"exclude-cn":           100,
-			"geolocation-!cn":      1,
-			"category-dev":         1,
-			"ai":                   1,
-			"category-ai-chat-!cn": 1,
-			"mojang":               1,
-			"bing":                 1,
-			"onedrive":             10,
-			"google":               10,
-			"hoyoverse":            100,
-			"cn":                   -10,
-			"category-games":       -1,
-			"tld-cn":               -100,
-			"apple":                -1,
-			"microsoft":            -1,
-			"category-ads-all":     -100,
-			"not-proxy":            -10000,
-			"steam":                -100,
-			"public-tracker":       -100,
-			"block-windows-spy":    -100,
-			"ads":                  -100,
-			"dnsmasq-china-list":   -100,
-		},
-	})
-	google := v2ray.ApplyRule(&domainlist.Rule{
-		DomainType: domainType,
-		TagWeight: map[string]int64{
-			"google":           1,
-			"ads":              -100,
-			"category-ads-all": -100,
-		},
-	})
-	steam := v2ray.ApplyRule(&domainlist.Rule{
-		DomainType: domainType,
-		TagWeight: map[string]int64{
-			"steam":         1,
-			"exclude-steam": -100,
+			"include-proxy":                    1e8,
+			"exclude-proxy":                    -1e8,
+			"category-game-platforms-download": -10,
+			"geolocation-cn":                   -1,
+			"geolocation-!cn":                  1,
+			"category-games-cn":                -1,
+			"category-games-!cn":               1,
+			"@cn":                              -10,
+			"@!cn":                             10,
+			"dnsmasq-china-list":               -1,
+			"cn":                               -1,
+			"category-ai-!cn":                  1,
+			"connectivity-check":               -1,
 		},
 	})
 	ai := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
-			"category-ai-!cn":  1,
-			"ai":               1,
-			"openai":           1,
-			"bing":             1,
-			"reka":             1,
-			"google-gemini":    1,
-			"claude":           1,
-			"ads":              -100,
-			"category-ads-all": -100,
+			"category-ai-!cn": 1,
 		},
 	})
 	telegramGeosite := v2ray.ApplyRule(&domainlist.Rule{
@@ -131,8 +101,6 @@ func main() {
 	compile.Save2ruleset(direct, "./public/direct.srs")
 	compile.Save2ruleset(proxy, "./public/proxy.srs")
 	compile.Save2ruleset(ai, "./public/ai.srs")
-	compile.Save2ruleset(google, "./public/google.srs")
-	compile.Save2ruleset(steam, "./public/steam.srs")
 	compile.Save2ruleset(telegramGeosite, "./public/telegram-geosite.srs")
 
 	telegramgeoip("./public/telegram-geoip.srs")
