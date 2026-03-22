@@ -10,6 +10,7 @@
         "tinygo.org": "include-proxy",
         "bangumi.moe": "include-proxy",
         "acg.rip": "include-proxy",
-        "share.acgnx.se": "include-proxy"
+        "share.acgnx.se": "include-proxy",
+        "steamcontent.com": "category-game-platforms-download"
     }
 }
