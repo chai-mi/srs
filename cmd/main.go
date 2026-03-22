@@ -63,6 +63,7 @@ func main() {
 			"cn":                               1,
 			"category-ai-!cn":                  -1,
 			"connectivity-check":               1,
+			"google":                           -100,
 		},
 	})
 	proxy := v2ray.ApplyRule(&domainlist.Rule{
@@ -81,6 +82,7 @@ func main() {
 			"cn":                               -1,
 			"category-ai-!cn":                  1,
 			"connectivity-check":               -1,
+			"google":                           100,
 		},
 	})
 	ai := v2ray.ApplyRule(&domainlist.Rule{
