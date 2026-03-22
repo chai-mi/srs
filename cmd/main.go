@@ -72,7 +72,7 @@ func main() {
 			"cn":                               1,
 			"category-ai-!cn":                  -1,
 			"google":                           -100,
-			"connectivity-check":               1,
+			"connectivity-check":               -10,
 		},
 	})
 
@@ -91,8 +91,8 @@ func main() {
 			"dnsmasq-china-list":               -1,
 			"cn":                               -1,
 			"category-ai-!cn":                  1,
-			"connectivity-check":               -1,
 			"google":                           100,
+			"connectivity-check":               10,
 		},
 	})
 	ai := v2ray.ApplyRule(&domainlist.Rule{
