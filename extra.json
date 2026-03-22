@@ -1,5 +1,6 @@
 {
     "suffix": {
+        "connectivitycheck.gstatic.com": "google",
         "mcdn.bilivideo.cn": "include-block",
         "argotunnel.com": "exclude-proxy",
         "ieee.org": "exclude-proxy",
