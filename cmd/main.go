@@ -15,7 +15,7 @@ import (
 
 func main() {
 	v2ray, _ := source.NewGeoSite("https://raw.githubusercontent.com/v2fly/domain-list-community/release/dlc.dat").Load()
-	chinaList, _ := source.NewDnsmasq("https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf", "dnsmasq-china-list").Load()
+	// chinaList, _ := source.NewDnsmasq("https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf", "dnsmasq-china-list").Load()
 	// trackerslist, _ := source.NewUrl("https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt", "public-tracker").Load()
 	// trackersListCollection, _ := source.NewUrl("https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt", "public-tracker").Load()
 	// windowsSpyBlocker, _ := source.NewHosts("https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt", "block-windows-spy").Load()
@@ -37,7 +37,7 @@ func main() {
 		"steamcontent.com":              mapset.NewSet("category-game-platforms-download"),
 	}
 
-	v2ray.Union(chinaList)
+	// v2ray.Union(chinaList)
 	// v2ray.Union(trackerslist)
 	// v2ray.Union(trackersListCollection)
 	// v2ray.Union(windowsSpyBlocker)
@@ -49,11 +49,10 @@ func main() {
 	block := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int64{
-			"include-block":     1e8,
-			"exclude-block":     -1e8,
-			"block-windows-spy": 1,
-			"category-ads-all":  1,
-			"@ads":              1,
+			"include-block":    1e8,
+			"exclude-block":    -1e8,
+			"category-ads-all": 1,
+			"@ads":             1,
 		},
 	})
 	direct := v2ray.ApplyRule(&domainlist.Rule{
@@ -68,11 +67,9 @@ func main() {
 			"category-games-!cn":               -1,
 			"@cn":                              10,
 			"@!cn":                             -10,
-			"dnsmasq-china-list":               1,
-			"cn":                               1,
 			"category-ai-!cn":                  -1,
 			"google":                           -100,
-			"connectivity-check":               -10,
+			"connectivity-check":               10,
 		},
 	})
 
@@ -88,11 +85,9 @@ func main() {
 			"category-games-!cn":               1,
 			"@cn":                              -10,
 			"@!cn":                             10,
-			"dnsmasq-china-list":               -1,
-			"cn":                               -1,
 			"category-ai-!cn":                  1,
 			"google":                           100,
-			"connectivity-check":               10,
+			"connectivity-check":               -10,
 		},
 	})
 	ai := v2ray.ApplyRule(&domainlist.Rule{
