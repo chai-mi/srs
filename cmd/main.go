@@ -15,10 +15,6 @@ import (
 
 func main() {
 	v2ray, _ := source.NewGeoSite("https://raw.githubusercontent.com/v2fly/domain-list-community/release/dlc.dat").Load()
-	// chinaList, _ := source.NewDnsmasq("https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf", "dnsmasq-china-list").Load()
-	// trackerslist, _ := source.NewUrl("https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt", "public-tracker").Load()
-	// trackersListCollection, _ := source.NewUrl("https://raw.githubusercontent.com/XIU2/TrackersListCollection/master/all.txt", "public-tracker").Load()
-	// windowsSpyBlocker, _ := source.NewHosts("https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt", "block-windows-spy").Load()
 
 	extra := domainlist.NewDomainList()
 	extra.Suffix = map[string]mapset.Set[string]{
@@ -34,15 +30,11 @@ func main() {
 		"bangumi.moe":                   mapset.NewSet("include-proxy"),
 		"acg.rip":                       mapset.NewSet("include-proxy"),
 		"share.acgnx.se":                mapset.NewSet("include-proxy"),
+		"marimo.io":                     mapset.NewSet("include-proxy"),
 		"steamcontent.com":              mapset.NewSet("category-game-platforms-download"),
 	}
 
-	// v2ray.Union(chinaList)
-	// v2ray.Union(trackerslist)
-	// v2ray.Union(trackersListCollection)
-	// v2ray.Union(windowsSpyBlocker)
 	v2ray.Union(extra)
-
 	v2ray.Save("./list/all.json")
 
 	domainType := []string{"suffix", "full"}
