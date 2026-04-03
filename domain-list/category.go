@@ -3,9 +3,9 @@ package domainlist
 import "slices"
 
 type Rule struct {
-	Over       int64            `json:"over,omitempty"`
-	DomainType []string         `json:"domain type,omitempty"`
-	TagWeight  map[string]int64 `json:"tag weight"`
+	Over       int
+	DomainType []string
+	TagWeight  map[string]int
 }
 
 func (dl *DomainList) ApplyRule(rule *Rule) *DomainList {
@@ -33,10 +33,9 @@ func (dl *DomainList) ApplyRule(rule *Rule) *DomainList {
 	return dr
 }
 
-func countWeight(tags Tags, tagWeight map[string]int64) int64 {
-	var count int64
+func countWeight(tags Tags, tagWeight map[string]int) (count int) {
 	for tag := range tags.Iter() {
 		count += tagWeight[tag]
 	}
-	return count
+	return
 }

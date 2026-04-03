@@ -31,6 +31,7 @@ func main() {
 		"acg.rip":                       mapset.NewSet("include-proxy"),
 		"share.acgnx.se":                mapset.NewSet("include-proxy"),
 		"marimo.io":                     mapset.NewSet("include-proxy"),
+		"qbittorrent.org":               mapset.NewSet("include-proxy"),
 		"steamcontent.com":              mapset.NewSet("category-game-platforms-download"),
 	}
 
@@ -40,7 +41,7 @@ func main() {
 	domainType := []string{"suffix", "full"}
 	block := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
-		TagWeight: map[string]int64{
+		TagWeight: map[string]int{
 			"include-block":    1e8,
 			"exclude-block":    -1e8,
 			"category-ads-all": 1,
@@ -49,7 +50,7 @@ func main() {
 	})
 	direct := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
-		TagWeight: map[string]int64{
+		TagWeight: map[string]int{
 			"include-proxy":                    -1e8,
 			"exclude-proxy":                    1e8,
 			"category-game-platforms-download": 10,
@@ -67,7 +68,7 @@ func main() {
 
 	proxy := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
-		TagWeight: map[string]int64{
+		TagWeight: map[string]int{
 			"include-proxy":                    1e8,
 			"exclude-proxy":                    -1e8,
 			"category-game-platforms-download": -10,
@@ -84,13 +85,13 @@ func main() {
 	})
 	ai := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
-		TagWeight: map[string]int64{
+		TagWeight: map[string]int{
 			"category-ai-!cn": 1,
 		},
 	})
 	telegramGeosite := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
-		TagWeight: map[string]int64{
+		TagWeight: map[string]int{
 			"telegram": 1,
 		},
 	})
