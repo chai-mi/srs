@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	domainlist "github.com/chai-mi/srs/domain-list"
+	domainlist "github.com/chai-mi/srs/internal/domain-list"
 
 	"github.com/sagernet/sing-box/common/srs"
 	"github.com/sagernet/sing-box/constant"

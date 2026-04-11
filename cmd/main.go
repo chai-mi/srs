@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/chai-mi/srs/compile"
-	domainlist "github.com/chai-mi/srs/domain-list"
-	"github.com/chai-mi/srs/source"
+	"github.com/chai-mi/srs/internal/compile"
+	domainlist "github.com/chai-mi/srs/internal/domain-list"
+	"github.com/chai-mi/srs/internal/source"
 	mapset "github.com/deckarep/golang-set/v2"
 
 	"github.com/sagernet/sing-box/common/srs"

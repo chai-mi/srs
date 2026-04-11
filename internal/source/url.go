@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"strings"
 
-	domainlist "github.com/chai-mi/srs/domain-list"
+	domainlist "github.com/chai-mi/srs/internal/domain-list"
 )
 
 var _ SourceData = (*Url)(nil)

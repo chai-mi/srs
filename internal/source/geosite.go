@@ -3,7 +3,7 @@ package source
 import (
 	"strings"
 
-	domainlist "github.com/chai-mi/srs/domain-list"
+	domainlist "github.com/chai-mi/srs/internal/domain-list"
 
 	mapset "github.com/deckarep/golang-set/v2"
 	"github.com/v2fly/v2ray-core/v5/app/router/routercommon"
