@@ -62,6 +62,7 @@ func main() {
 			"@!cn":                             -10,
 			"category-ai-!cn":                  -1,
 			"google":                           -100,
+			"apple":                            1,
 			"connectivity-check":               10,
 		},
 	})
@@ -80,6 +81,7 @@ func main() {
 			"@!cn":                             10,
 			"category-ai-!cn":                  1,
 			"google":                           100,
+			"apple":                            -1,
 			"connectivity-check":               -10,
 		},
 	})
