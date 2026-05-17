@@ -32,6 +32,8 @@ func main() {
 		"share.acgnx.se":                mapset.NewSet("include-proxy"),
 		"marimo.io":                     mapset.NewSet("include-proxy"),
 		"qbittorrent.org":               mapset.NewSet("include-proxy"),
+		"lmarena.ai":                    mapset.NewSet("include-proxy"),
+		"arena.ai":                      mapset.NewSet("include-proxy"),
 		"steamcontent.com":              mapset.NewSet("category-game-platforms-download"),
 	}
 
@@ -88,7 +90,9 @@ func main() {
 	ai := v2ray.ApplyRule(&domainlist.Rule{
 		DomainType: domainType,
 		TagWeight: map[string]int{
-			"category-ai-!cn": 1,
+			"openai":    1,
+			"xai":       1,
+			"anthropic": 1,
 		},
 	})
 	telegramGeosite := v2ray.ApplyRule(&domainlist.Rule{
@@ -107,6 +111,7 @@ func main() {
 	block.Save("./list/block.json")
 	direct.Save("./list/direct.json")
 	proxy.Save("./list/proxy.json")
+	ai.Save("./list/ai.json")
 
 	telegramgeoip("./public/telegram-geoip.srs")
 }
